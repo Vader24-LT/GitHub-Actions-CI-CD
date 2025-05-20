@@ -1,8 +1,109 @@
-fdgb
+Full-Stack CI/CD Pipeline with GitHub Actions and Render
 
-rthrwh
+Overview
 
-524
+This project demonstrates a full-stack application with an integrated CI/CD pipeline that:
+Runs Cypress component tests on Pull Requests to the develop branch
+Automatically deploys to Render when code is merged to main
 
-rthrwh
+Prerequisites
 
+Before you begin, ensure you have the following:
+GitHub account
+Render account (for deployment)
+Node.js installed (for local development)
+Basic understanding of Git workflows
+
+Getting Started
+
+1. Clone the Repository
+bash
+Copy
+Download
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+2. Install Dependencies
+For both frontend and backend (if applicable):
+bash
+Copy
+Download
+npm install
+3. Development Workflow
+Create a new feature branch from develop:
+bash
+Copy
+Download
+git checkout develop
+git pull origin develop
+git checkout -b feature/your-feature-name
+Make your changes and commit them:
+bash
+Copy
+Download
+git add .
+git commit -m "Description of your changes"
+Push your branch to GitHub:
+bash
+Copy
+Download
+git push origin feature/your-feature-name
+Create a Pull Request (PR) from your feature branch to develop
+
+CI/CD Pipeline
+
+Pull Request to Develop
+When you create a PR to the develop branch:
+GitHub Actions will automatically:
+Set up the testing environment
+Run Cypress component tests
+Report test results in the PR checks
+DO NOT MERGE if tests are failing.
+Merge to Main
+When your code is merged from develop to main:
+GitHub Actions will automatically:
+Build the production version of your application
+Deploy to your Render service
+Update your live application
+
+Configuration
+
+Required Environment Variables
+Set these in your GitHub repository secrets (Settings > Secrets > Actions):
+RENDER_API_KEY - Your Render API key
+RENDER_SERVICE_ID - Your Render service ID
+Render Setup
+Create a new Web Service on Render
+Connect it to your GitHub repository
+Configure automatic deploys from the main branch
+
+Testing Locally
+To run Cypress tests locally before pushing:
+bash
+Copy
+Download
+npm run test
+Or open the Cypress test runner:
+bash
+Copy
+Download
+npm run cypress:open
+Troubleshooting
+If GitHub Actions fail:
+Check the Actions tab for detailed logs
+Ensure all tests pass locally before pushing
+Verify your environment variables are correctly set
+If deployment fails:
+Check Render logs
+Verify the GitHub Action has proper permissions
+Ensure your main branch builds successfully locally
+
+Contributing
+
+Fork the project
+Create your feature branch (git checkout -b feature/AmazingFeature)
+Commit your changes (git commit -m 'Add some AmazingFeature')
+Push to the branch (git push origin feature/AmazingFeature)
+Open a Pull Request to develop
+
+License
+MIT

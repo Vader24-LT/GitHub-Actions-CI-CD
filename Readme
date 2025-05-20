@@ -49,6 +49,8 @@ npm install
 
 Set up environment variables (create .env files for both frontend and backend)
 
+
+
 Workflow
 
 Development Process
@@ -62,6 +64,8 @@ Make your changes and commit
 Push to GitHub and create a Pull Request to develop
 
 CI/CD Flow
+
+
 
 PR to develop:
 
@@ -140,6 +144,8 @@ Testing
 Run tests locally before pushing:
 
 npm test
+
+Test Completed: https://1drv.ms/f/c/f6a9ddf4b60e94aa/ErTUtGfHp6dDks5a7VkW6I0BSLWiGdJK-EfAsUDZnp0J7Q?e=j1JU83
 
 
 

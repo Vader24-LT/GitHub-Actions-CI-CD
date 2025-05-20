@@ -1,26 +1,6 @@
 CI/CD Pipeline for Full-Stack Application
 
 
-Project Overview
-
-This repository demonstrates a full-stack application with an integrated CI/CD pipeline that:
-
-Runs Cypress component tests on Pull Requests to the develop branch
-
-Automatically deploys to Render when code is merged to main
-
-User Story
-
-As a software engineer looking to integrate a CI/CD pipeline in a codebase, I want a full-stack application that:
-
-Runs test cases when a Pull Request is made to the develop branch
-
-Automatically deploys to Render when code is merged to main
-
-This ensures all code integrations are clean and pass requirements, while keeping the application constantly updated with major releases.
-
-Features
-
 CI/CD Pipeline
 
 Pre-Merge Testing: Cypress component tests run automatically on PRs to develop
@@ -30,6 +10,8 @@ Auto-Deployment: Automatic deployment to Render when code is merged to main
 GitHub Actions: Two workflows manage the testing and deployment processes
 
 Branch Protection
+
+
 
 develop branch requires:
 
@@ -50,6 +32,8 @@ npm or yarn
 Render account (for deployment)
 
 GitHub account
+
+
 
 Installation
 
@@ -135,6 +119,8 @@ jobs:
           render-token: ${{ secrets.RENDER_TOKEN }}
           service-id: ${{ secrets.RENDER_SERVICE_ID }}
 
+
+
 Configuration
 
 Required Secrets
@@ -155,6 +141,8 @@ Run tests locally before pushing:
 
 npm test
 
+
+
 Contributing
 
 Fork the project
@@ -167,9 +155,13 @@ Push to the branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request to develop
 
+
+
 License
 
 Distributed under the MIT License.
+
+
 
 Contact
 
